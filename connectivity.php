@@ -37,4 +37,3 @@ if(isset($_POST['submit']))
 ?>
 
 
-Read more: http://mrbool.com/how-to-create-a-login-page-with-php-and-mysql/28656#ixzz52jyh846e

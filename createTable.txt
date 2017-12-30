@@ -1,0 +1,32 @@
+CREATE table admin (
+    username varchar(30) ,
+    passwords varchar(20) ,
+    PRIMARY KEY (username)
+)
+
+
+CREATE table users (
+    username varchar(30) ,
+    passwords varchar(20),
+    name varchar(30) ,
+    PRIMARY key (username)
+    )
+
+
+CREATE table ticket (
+    gameDate date ,
+    number int ,
+    times time NULL ,
+    cost int ,
+    info varchar(100),
+    id int ,
+    PRIMARY KEY (id)
+    )
+
+CREATE table reservedTicket (
+    username varchar(30),
+    id int ,
+    FOREIGN KEY (id) REFERENCES ticket(id),
+    FOREIGN KEY (username) REFERENCES users(username)
+    
+    )
