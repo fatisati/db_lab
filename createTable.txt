@@ -19,7 +19,7 @@ CREATE table ticket (
     times time NULL ,
     cost int ,
     info varchar(100),
-    id int ,
+    id int NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id)
     )
 
