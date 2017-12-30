@@ -41,6 +41,16 @@ session_start();   //starting the session for user profile page//
 	
 }
 
+function add_ticket()
+{
+	
+	session_start();   //starting the session for user profile page//
+	$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
+	$query = mysql_query("INSERT INTO ticket(gameDate, number, times, cost, info)
+					VALUES ('$_POST[date]', '$_POST[number]', '$_POST[time]', '$_POST[cost]', '$_POST[info]')") or die(mysql_error());
+	echo "inserted";
+}
+
 
 
 if(isset($_POST['submit']))
@@ -51,6 +61,11 @@ if(isset($_POST['submit']))
 if(isset($_POST['signup']))
 {
 	SignUp();	
+}
+
+if(isset($_POST['add_ticket']))
+{
+	add_ticket();
 }
 
 ?>
