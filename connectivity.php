@@ -13,9 +13,10 @@ $Password = $_POST['pass'];
 function SignIn()
 {
 session_start();   //starting the session for user profile page
+echo $_POST['user'];
 if(!empty($_POST['user']))   //checking the 'user' name which is from Sign-In.html, is it empty or have some text
 {
-	$query = mysql_query("SELECT *  FROM UserName where userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error());
+	$query = mysql_query("SELECT *  FROM users where username = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error());
 	$row = mysql_fetch_array($query) or die(mysql_error());
 	if(!empty($row['userName']) AND !empty($row['pass']))
 	{
@@ -29,9 +30,27 @@ if(!empty($_POST['user']))   //checking the 'user' name which is from Sign-In.ht
 	}
 }
 }
+
+function SignUp()
+{
+	
+session_start();   //starting the session for user profile page//
+	$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
+	$query = mysql_query("INSERT INTO users (username, passwords, name)
+					VALUES ('$_POST[username]', '$_POST[password]', '$_POST[name]')") or die(mysql_error());
+	
+}
+
+
+
 if(isset($_POST['submit']))
 {
 	SignIn();
+}
+
+if(isset($_POST['signup']))
+{
+	SignUp();	
 }
 
 ?>
