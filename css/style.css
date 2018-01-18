@@ -1,0 +1,51 @@
+.container-fluid{
+    background-color: rgb(216, 216, 216)!important;
+}
+.navbar-inverse{
+    border: none;
+}
+.navbar-form{
+    border: none;
+}
+.loginpage{
+    border: 1px solid black;
+}
+
+
+/*login*/
+.loginbtn{
+    width: 100%;
+    margin: auto;
+    background-color: rgb(74, 74, 74);
+    color: white;
+    margin-top: 20px;
+}
+.loginform{
+    border: 1px solid #999999;
+    border-radius: 10px;
+    padding: 40px 50px 40px 50px;
+    margin: auto;
+    margin-top:200px;
+}
+.loginform1{
+    margin-top: 25px;
+}
+.linklogin{
+    text-align: center;
+    margin-top: 20px;
+}
+.linklogin1{
+    color: rgb(74, 74, 74) !important;
+    display: block;
+    padding-top: 10px;
+    font-weight: 400;
+}
+.linklogin1:hover{
+    text-decoration: none;
+    color: #90A4AE !important;
+}
+.buykadr{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 244, 244);
+}

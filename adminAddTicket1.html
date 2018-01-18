@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adminAddTickets</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div  class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="adminShowTickets.html">ShowTickets</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="buykadr">
+            <form method="POST" action="connectivity.php">
+                information <br><input type="text" name="info" size="40"><br>
+                date<br><input type="date" name="date" size="40"><br>
+                number <br><input type="number" name="number" size="40"><br>
+                time <br><input type="time" name="time" size="40"><br>
+                cost <br><input type="number" name="cost" size="40"><br>
+                <input id="button" type="submit" name="add_ticket" value="add ticket">
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

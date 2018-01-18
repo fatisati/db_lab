@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buyTicket</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div  class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href='login.html'>Logout</a></li>
+            <li><a href="mytickets.html">MyTickets</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="buykadr">
+               <form method="POST" action="connectivity.php">
+                    Ticket ID:<br>
+                    <input type="text" name="id" >
+                    <br>
+                    username:<br>
+                    <input type="text" name="username">
+                    <br>
+                    <input id="button" type="submit" name="reserve">
+                </form>
+                <a href="buyticket.html">buy more!</a>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+</div>
+</body>
+
+</html>
